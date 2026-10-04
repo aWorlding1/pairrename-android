@@ -10,19 +10,23 @@
 
 - `versionName`: 6.2.3
 - `versionCode`: 61
+- Package: `com.yuanbao.pairrename`
 - `minSdk`: 26 (Android 8.0)
 - `targetSdk` / `compileSdk`: 35
 
-## Validation status
+## APK and validation
 
-The supplied project notes report an install-and-interaction pass on a MuMu Android 15 emulator, including repeated drag/drop after the duplicate-key fix. The repository includes source-level regression scripts (`bash verify_all.sh`). This release note does not claim a fresh Android SDK build or exhaustive testing across devices and storage providers in this environment.
+- The signed v6.2.3 APK's package/version metadata was checked against this source snapshot; Android APK Signature Scheme v2 verification passed.
+- SHA-256 values for the APK and source archive are in `PairRename-v6.2.3-SHA256SUMS.txt`.
+- [GitHub Actions run 37170552174](https://github.com/aWorlding1/pairrename-android/actions/runs/37170552174) passed the source regression suite and Android Debug build for application source commit `46e2b65`. The attached release APK is a separate signed release artifact, not the CI-generated Debug APK; this does not claim a reproducible source-to-binary build.
+- Supplied project notes report install-and-interaction checks on a MuMu Android 15 emulator, including repeated drag/drop after the duplicate-key fix. Those are project-reported checks, not exhaustive device or storage-provider coverage.
 
 ## Safety
 
-Back up important files independently and test on copies before using new workflows. The in-app history and trash are not backups. Release builds require the user's own signing key; never distribute it with the source.
+Back up important files independently and test on copies before using new workflows. The in-app history and trash are not backups. Do not share release signing keys or passwords.
 
 ## 中文摘要
 
-6.2.3 修复了改名后 Lazy 列表可能遇到重复 key 而崩溃的问题；若增量更新会生成重复 key，则放弃局部回填并执行完整刷新。拖拽模式通过独立把手分离拖放和滚动手势。版本号为 **6.2.3 / versionCode 61**，最低支持 Android 8.0（API 26）。
+6.2.3 修复了改名后 Compose 懒加载列表可能遇到重复 key 而崩溃的问题；若增量更新会产生重复 key，则放弃局部回填并执行完整刷新。拖拽模式通过独立把手分离拖放和滚动手势。版本号为 **6.2.3 / versionCode 61**，包名为 `com.yuanbao.pairrename`，最低支持 Android 8.0（API 26）。
 
-项目提供的记录称已在 MuMu Android 15 模拟器完成安装与交互验证；源码回归脚本可通过 `bash verify_all.sh` 运行。本说明不代表当前环境重新完成 Android SDK 构建，也不代表已覆盖所有设备和存储提供方。
+随附签名 APK 的包名、版本信息与源码一致，APK Signature Scheme v2 签名验证通过。GitHub Actions 的源码回归与 Android Debug 构建通过，但 Debug 构建不是随附的 Release APK，也不代表完成可复现构建验证。项目提供的记录称已在 MuMu Android 15 模拟器完成交互验证；这不代表覆盖所有设备和存储提供方。

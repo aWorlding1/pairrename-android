@@ -8,7 +8,7 @@ PairRename is an open-source Android image workflow tool for people who need to 
 PairRename 是一款开源 Android 图片整理工具，适合整理相机原片与编辑导出件等两组照片。左右双栏并排浏览、核对候选配对，再把文件名统一起来；整个过程都能看见图片本身。
 
 > **Current source snapshot: v6.2.3 · versionCode 61 · Android 8.0+ (API 26+)**  
-> This repository is the source-code release. A prebuilt APK is not published here yet.
+> Source and signed APK downloads: [GitHub Releases](https://github.com/aWorlding1/pairrename-android/releases).
 
 ## Why PairRename?
 
@@ -31,7 +31,7 @@ Feature availability can depend on Android and the storage provider. Always revi
 3. Compare thumbnails and names. Pair images by tapping, dragging, or aligning by order; inspect suggested matches before accepting them.
 4. Review the proposed rename/organize operation and any conflicts, then apply it. Try undo/history on a small test folder before using a new workflow on important files.
 
-**No APK is attached to this source repository at this time.** Build a debug APK using the instructions below. Do not install APKs from sources you do not trust.
+Download the signed release APK from [GitHub Releases](https://github.com/aWorlding1/pairrename-android/releases) and verify its SHA-256 checksum before installing. You can also build a debug APK using the instructions below. Do not install APKs from sources you do not trust.
 
 ### Build from source
 
@@ -57,9 +57,9 @@ bash verify_all.sh
 
 ## Version and validation
 
-The source snapshot is **v6.2.3 (versionCode 61)**. Its handoff notes report installation and interaction checks on a MuMu Android 15 emulator, including the dedicated drag grip, scrolling while drag mode is active, and repeated drag/drop without the duplicate-list-key crash fixed in this version. These are project-reported checks, not a claim that every Android device or document provider has been tested.
+The source snapshot is **v6.2.3 (versionCode 61)**. The project-supplied notes report installation and interaction checks on a MuMu Android 15 emulator, including the dedicated drag grip, scrolling while drag mode is active, and repeated drag/drop without the duplicate-list-key crash fixed in this version. These are project-reported checks, not a claim that every Android device or document provider has been tested.
 
-The source-only verification scripts are included and can be run locally or in CI. Android SDK builds, storage-provider fault injection, power-loss recovery, and performance profiling are separate validation tasks; consult the test output and your own device results rather than assuming they passed.
+The source-level regression suite and an Android Debug build both passed in [GitHub Actions run 37170552174](https://github.com/aWorlding1/pairrename-android/actions/runs/37170552174). The separate v6.2.3 release APK was verified with Android `apksigner` (APK Signature Scheme v2); its package and version metadata match this source snapshot. This verifies signature integrity and metadata, not reproducible source-to-binary equivalence or every device/storage-provider workflow.
 
 ## Privacy and file safety
 
@@ -105,7 +105,7 @@ cd pairrename-android
 
 调试 APK 输出在 `app/build/outputs/apk/debug/`。Windows 可运行 `gradlew.bat :app:assembleDebug`。
 
-**当前仓库暂未发布 APK。** Release 包必须使用你自己的签名密钥；请参照 `app/keystore.properties.example`，勿将签名密钥或密码提交到 Git。
+**Release APK 可从 [GitHub Releases](https://github.com/aWorlding1/pairrename-android/releases) 下载。** 自行编译 Release 包时必须使用你自己的签名密钥；请参照 `app/keystore.properties.example`，勿将签名密钥或密码提交到 Git。
 
 ### 隐私与文件安全
 
