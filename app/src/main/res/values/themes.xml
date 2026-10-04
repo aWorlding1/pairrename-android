@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 用系统 Material 主题（不带 ActionBar），会跟随系统深色，避免启动瞬间白屏闪一下。
+         界面本身由 Compose 的 PairRenameTheme 接管。 -->
+    <style name="Theme.PairRename" parent="android:Theme.Material.NoActionBar" />
+</resources>

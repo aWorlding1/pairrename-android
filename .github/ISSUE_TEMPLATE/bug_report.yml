@@ -1,0 +1,48 @@
+name: Bug report / 问题反馈
+description: Report a reproducible bug without sharing private photos or credentials.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues first. Never attach private photos, full folder listings, signing keys, or passwords. / 请先搜索已有问题；不要上传私人照片、完整目录清单、签名密钥或密码。
+  - type: input
+    id: version
+    attributes:
+      label: PairRename version / 应用版本
+      placeholder: e.g. 6.2.3
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Android version and device / Android 版本与设备
+    validations:
+      required: true
+  - type: input
+    id: provider
+    attributes:
+      label: Storage provider / 存储提供方
+      description: e.g. local storage, SD card, OEM document provider
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: Use synthetic files and include the smallest set of steps.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual result / 预期结果与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs or screenshots / 脱敏日志或截图
+      description: Remove personal paths, photo names, account details, and tokens.
+    validations:
+      required: false

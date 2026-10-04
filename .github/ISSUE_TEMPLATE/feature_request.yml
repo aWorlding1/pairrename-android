@@ -1,0 +1,26 @@
+name: Feature request / 功能建议
+description: Propose a focused improvement and describe the user workflow.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing requests first. Describe the problem rather than prescribing a particular implementation. / 请先搜索已有建议，优先说明要解决的问题和使用场景。
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve? / 想解决什么问题？
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: What workflow would help? / 希望怎样使用？
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or context / 已尝试的方法或补充背景
+    validations:
+      required: false

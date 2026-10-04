@@ -1,0 +1,30 @@
+# Machine-local Android/Gradle configuration
+/local.properties
+/.gradle/
+**/build/
+/.idea/
+*.iml
+
+# Release signing material (never commit or distribute)
+/app/keystore.properties
+/app/*.jks
+/app/*.keystore
+*.jks
+*.keystore
+*.p12
+*.pfx
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Local build logs
+/build2.log
+/lint.log

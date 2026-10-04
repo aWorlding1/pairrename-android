@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability / 安全漏洞
+    url: https://github.com/aWorlding1/pairrename-android/security/advisories/new
+    about: Report vulnerabilities privately. Do not post exploit details or private photos in public issues.
+  - name: Usage and contribution guide / 使用与贡献指南
+    url: https://github.com/aWorlding1/pairrename-android/blob/main/CONTRIBUTING.md
+    about: Read the guide before opening an issue or pull request.
