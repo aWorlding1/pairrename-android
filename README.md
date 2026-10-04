@@ -73,13 +73,13 @@ These checks do not require an Android SDK or Gradle. They exercise source-level
 
 ## Version and validation
 
-The latest public tagged release remains **v6.2.3 (versionCode 61)**. The `main` branch now contains **v6.2.4 source (versionCode 62)**, with R8 code minification and resource shrinking enabled for Release builds. The supplied v6.2.4 APK is 2.03 MiB—about 83% smaller than the v6.2.3 APK. Its package/version metadata match, its APK Signature Scheme v2 signature verifies, and its signer certificate matches the publicly released v6.2.3 APK. These checks establish signature validity and signing continuity, **not** a reproducible source-to-binary build. The v6.2.4 APK has not yet been published as a GitHub Release. See the [build and verification guide](docs/BUILDING_AND_VERIFICATION.md) for commands and limits.
+The `main` branch contains **v6.2.4 source (versionCode 62)**, with R8 code minification and resource shrinking enabled for Release builds. Download the latest signed APK and its matching checksum manifest from [GitHub Releases](https://github.com/aWorlding1/pairrename-android/releases/latest). The verified v6.2.4 APK measures 2.03 MiB—about 83% smaller than the v6.2.3 APK. Its package/version metadata match, its APK Signature Scheme v2 signature verifies, and its signer certificate matches the previously published v6.2.3 APK. These checks establish signature validity and signing continuity, **not** a reproducible source-to-binary build. See the [build and verification guide](docs/BUILDING_AND_VERIFICATION.md) for commands and limits.
 
 Project-supplied notes report that v6.2.4 was installed over v6.2.3 with user data retained and that interaction checks were performed on a MuMu Android 15 emulator. These are project-attributed results, not independently reproduced here and not a claim that every Android device or document provider has been tested. The live CI badge above tracks the default-branch workflow; use [workflow history](https://github.com/aWorlding1/pairrename-android/actions/workflows/ci.yml) to inspect current runs and their exact jobs rather than relying on a hard-coded run number.
 
 ## Project documentation
 
-[Documentation index](docs/index.md) · [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md) · [v6.2.3 release notes](RELEASE_NOTES.md) · [Project principles](docs/PROJECT_PRINCIPLES.md)
+[Documentation index](docs/index.md) · [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md) · [v6.2.4 release notes](RELEASE_NOTES-v6.2.4.md) · [v6.2.3 release notes](RELEASE_NOTES.md) · [Project principles](docs/PROJECT_PRINCIPLES.md)
 
 ## Privacy and file safety
 
@@ -129,12 +129,12 @@ PairRename 是一款本地优先的 Android 图片工作台，适合整理两组
 
 ## 下载与快速开始
 
-**当前公开下载版：** `v6.2.3` · `versionCode 61` · Android 8.0+（API 26+）
+**最新公开下载版：**请从 [GitHub Releases](https://github.com/aWorlding1/pairrename-android/releases/latest) 获取 APK 与同一发布页附带的 SHA-256 校验文件 · Android 8.0+（API 26+）
 
 **main 源码版本：** `v6.2.4` · `versionCode 62`；其 APK 尚未发布到 GitHub Releases。
 
 1. 在 [GitHub Releases](https://github.com/aWorlding1/pairrename-android/releases) 下载签名 APK 与 SHA-256 校验文件。
-2. 安装前先用 `PairRename-v6.2.3-SHA256SUMS.txt` 核对 APK；只安装你信任来源的软件。
+2. 安装前使用该 Release 同页的 SHA-256 清单核对 APK；只安装你信任来源的软件。
 3. 通过 Android 系统文件夹选择器选择左右目录，只授予确实需要管理的目录权限。
 4. 对照图片、核对配对建议，并在执行前检查改名方案与冲突。
 
@@ -164,7 +164,7 @@ cd pairrename-android
 
 ## 版本与验证
 
-当前最新公开标签版仍为 **v6.2.3（versionCode 61）**；`main` 分支现已包含 **v6.2.4 源码（versionCode 62）**，Release 构建开启 R8 代码压缩和资源收缩。随源码提供的 v6.2.4 APK 为 2.03 MiB，较 v6.2.3 缩小约 83%；其包名/版本元数据匹配，APK Signature Scheme v2 签名有效，签名证书与公开发布的 v6.2.3 APK 一致。这证明签名有效及签名连续性，**不代表源码到二进制可复现构建**；v6.2.4 APK 尚未发布到 GitHub Releases。
+`main` 分支包含 **v6.2.4 源码（versionCode 62）**，Release 构建开启 R8 代码压缩和资源收缩。已核验的 v6.2.4 APK 为 2.03 MiB，较 v6.2.3 缩小约 83%；其包名/版本元数据匹配，APK Signature Scheme v2 签名有效，签名证书与此前公开的 v6.2.3 APK 一致。这证明签名有效及签名连续性，**不代表源码到二进制可复现构建**。最新可下载版本和对应校验清单以 [GitHub Releases](https://github.com/aWorlding1/pairrename-android/releases/latest) 为准。
 
 项目提供的记录称，v6.2.4 曾覆盖安装 v6.2.3 并保留用户数据，且在 MuMu Android 15 模拟器进行了交互检查。这些是项目归属的测试记录，本次没有独立复现，也不表示已经覆盖所有 Android 设备或文档/存储提供方。上方 CI 徽章跟踪默认分支工作流；可在[工作流运行记录](https://github.com/aWorlding1/pairrename-android/actions/workflows/ci.yml)中查看每次运行及具体任务。
 
