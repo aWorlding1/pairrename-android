@@ -22,6 +22,12 @@ When a photo set has been copied, edited, or reorganized, matching files by file
 - **Keep a recovery path** — use operation history, undo/redo, and in-app trash/recovery where the selected storage provider supports them.
 - **Make the workspace yours** — filter, sort, select, inspect duplicates or mismatches, and use tablet/keyboard-friendly navigation.
 
+## Workflow at a glance
+
+![Workflow illustration: compare two folders, review pairings and the rename plan, then apply or adjust.](docs/images/pairrename-workflow.png)
+
+*Workflow illustration—not an in-app screenshot.* Genuine screenshots are planned once they can be captured from a running app; see the [roadmap](ROADMAP.md).
+
 For the product's safety and privacy commitments, see [Project Principles](docs/PROJECT_PRINCIPLES.md). Feature availability can vary by Android version and storage provider; review each plan and try unfamiliar workflows on copies first.
 
 ## Download and get started
@@ -59,9 +65,13 @@ These checks do not require an Android SDK or Gradle. They exercise source-level
 
 ## Version and validation
 
-The latest source snapshot is **v6.2.3 (versionCode 61)**. [GitHub Actions run 37172346926](https://github.com/aWorlding1/pairrename-android/actions/runs/37172346926) passed the source regression suite and Android Debug build. The separately distributed Release APK's package and version metadata match this source snapshot, and its APK Signature Scheme v2 signature verifies. This is a signature/metadata check, not a reproducible source-to-binary build.
+The latest tagged release is **v6.2.3 (versionCode 61)**. The live CI badge above tracks the default-branch workflow; use [workflow history](https://github.com/aWorlding1/pairrename-android/actions/workflows/ci.yml) to inspect current runs and their exact jobs rather than relying on a hard-coded run number. The separately distributed Release APK's package/version metadata match the tagged source, and its APK Signature Scheme v2 signature verifies. This is a signature/metadata check, not a reproducible source-to-binary build. See the [build and verification guide](docs/BUILDING_AND_VERIFICATION.md) for commands and limits.
 
 Project-supplied notes report installation and interaction checks on a MuMu Android 15 emulator, including repeated drag/drop after the duplicate-list-key fix. That report is attributed to the project; it is not a claim that every Android device or document provider has been tested.
+
+## Project documentation
+
+[Documentation index](docs/index.md) · [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md) · [v6.2.3 release notes](RELEASE_NOTES.md) · [Project principles](docs/PROJECT_PRINCIPLES.md)
 
 ## Privacy and file safety
 
@@ -97,6 +107,12 @@ PairRename 是一款本地优先的 Android 图片工作台，适合整理两组
 - **留有恢复路径**：操作历史、撤销/重做与应用内回收/恢复能力，取决于 Android 版本和所选存储提供方。
 - **按习惯整理**：筛选、排序、多选、重复/差异核查，并支持平板和键盘操作。
 
+## 工作流程一览
+
+![流程示意：比对两个目录、复核配对与改名方案，再执行或调整。](docs/images/pairrename-workflow.png)
+
+*这是流程示意图，不是应用界面截图。真实界面截图计划在能够从实际运行的应用中采集后再加入，详见[路线图](ROADMAP.md)。*
+
 关于数据安全和隐私的设计约定，参见[项目原则](docs/PROJECT_PRINCIPLES.md)。不同 Android 版本及存储提供方的行为可能不同；新流程请先在副本上验证。
 
 ## 下载与快速开始
@@ -130,6 +146,14 @@ cd pairrename-android
 
 这些脚本验证源码层面的不变量，不代替 Android 编译、真机测试或各存储提供方测试。
 
+构建环境、APK 核验命令及「可复现构建」的当前边界见[构建与核验指南](docs/BUILDING_AND_VERIFICATION.md)。
+
+## 版本与验证
+
+当前最新标签版为 **v6.2.3（versionCode 61）**。上方 CI 徽章跟踪默认分支工作流；可在[工作流运行记录](https://github.com/aWorlding1/pairrename-android/actions/workflows/ci.yml)中查看每次运行及具体任务。单独发布的 Release APK，其包名/版本元数据与该标签源码相符，APK Signature Scheme v2 签名核验通过。这是签名与元数据检查，不代表源码到二进制可复现构建。
+
+项目提供的记录称，曾在 MuMu Android 15 模拟器检查安装与交互，并在修复重复列表 key 后反复测试拖放流程。这是项目提供的测试记录，并不表示已经覆盖所有 Android 设备或文档/存储提供方。
+
 ## 隐私与文件安全
 
 - Manifest 未申请 Android `INTERNET` 权限；应用以本地使用为目标，不依赖账号或云服务。
@@ -141,6 +165,10 @@ cd pairrename-android
 ## 参与项目
 
 欢迎提交可复现的问题、聚焦明确的改进和文档贡献。请先阅读[贡献指南](CONTRIBUTING.md)，并遵守[社区行为准则](CODE_OF_CONDUCT.md)；常见问题见 [SUPPORT.md](SUPPORT.md)。
+
+## 项目文档
+
+[文档索引](docs/index.md) · [路线图](ROADMAP.md) · [变更记录](CHANGELOG.md) · [v6.2.3 发行说明](RELEASE_NOTES.md) · [项目原则](docs/PROJECT_PRINCIPLES.md)
 
 ## 许可
 

@@ -1,0 +1,10 @@
+%%{init: {"flowchart": {"nodeSpacing": 18, "rankSpacing": 24}, "themeVariables": {"fontSize": "28px"}}}%%
+flowchart LR
+    A[Folder A] --> C[Compare and pair]
+    B[Folder B] --> C
+    C --> D[Review plan]
+    D --> E{Ready?}
+    E -->|Yes| F[Apply]
+    E -->|No| G[Adjust or cancel]
+    G --> C
+    F --> H[Recovery if supported]
