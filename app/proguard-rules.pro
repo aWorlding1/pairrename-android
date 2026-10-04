@@ -15,3 +15,12 @@
 
 # SAF / DocumentsContract 全部走系统 API，无需保留任何模型类
 -keep class com.yuanbao.pairrename.model.** { *; }
+
+# 枚举名会被持久化：HistoryRepository 从历史 JSON 读 Side.valueOf，
+# TemplateRepository 从模板文本读 BatchMode/CaseOp。混淆或裁剪掉常量会让它们
+# 在运行时读不到（且是静默走默认值，不会报错 —— 属于最难查的一类坏）。
+# model 包已被整包 keep，这里是第二道保险，也覆盖将来移出 model 的枚举。
+-keepclassmembers enum com.yuanbao.pairrename.** {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}

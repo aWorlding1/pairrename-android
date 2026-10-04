@@ -16,7 +16,7 @@ java -version
 ./verify_all.sh
 ```
 
-The Debug APK is written to `app/build/outputs/apk/debug/`. The source-level checks do not require an Android SDK, but they are not a substitute for the Android build or device/storage-provider testing. See the [CI workflow](../.github/workflows/ci.yml) for the currently exercised toolchain and tasks.
+The Debug APK is written to `app/build/outputs/apk/debug/`. CI also runs `:app:shrinkReleaseRes` to exercise the R8/resource-shrinking path without a signing key; that task is not a public Release APK build. The source-level checks do not require an Android SDK, but they are not a substitute for device/storage-provider testing. See the [CI workflow](../.github/workflows/ci.yml) for the currently exercised toolchain and tasks.
 
 To build a Release variant locally, supply your own signing key through the documented ignored properties file or environment variables. Do not request, publish, or copy the maintainer's private signing key. A build signed with your own key is not update-compatible with an APK signed by a different key.
 
@@ -56,7 +56,7 @@ java -version
 ./verify_all.sh
 ```
 
-Debug APK 输出到 `app/build/outputs/apk/debug/`。源码级检查不需要 Android SDK，但不能代替 Android 编译、真机测试或存储提供方测试。当前实际验证的工具链与任务见 [CI 工作流](../.github/workflows/ci.yml)。
+Debug APK 输出到 `app/build/outputs/apk/debug/`。CI 还会运行 `:app:shrinkReleaseRes`，在不使用签名密钥的情况下检查 R8/资源收缩路径；这并不是公开 Release APK 构建。源码级检查不需要 Android SDK，但不能代替设备测试或存储提供方测试。当前实际验证的工具链与任务见 [CI 工作流](../.github/workflows/ci.yml)。
 
 如需本地构建 Release 变体，请使用你自己的签名密钥，并按项目示例配置被 Git 忽略的属性文件或环境变量。不要索要、复制或公开维护者的私钥。用自己的密钥签出的 APK，不能覆盖安装由其他密钥签名的版本。
 

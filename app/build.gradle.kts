@@ -43,13 +43,16 @@ android {
         applicationId = "com.yuanbao.pairrename"
         minSdk = 26
         targetSdk = 35
-        versionCode = 61
-        versionName = "6.2.3"
+        versionCode = 62
+        versionName = "6.2.4"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            // Release builds enable R8 and resource shrinking to reduce download size.
+            // proguard-rules.pro 已备好必要规则（DataStore/protobuf、Coil 反射、model 包、枚举名）。
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             signingConfigs.findByName("release")?.let { signingConfig = it }
         }

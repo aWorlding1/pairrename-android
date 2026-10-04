@@ -2,6 +2,11 @@
 
 This changelog highlights user-facing changes. Release-specific compatibility and validation details are recorded in [RELEASE_NOTES.md](RELEASE_NOTES.md); older versions are summarized at release level.
 
+## Unreleased — v6.2.4 source update
+
+- Enabled R8 code minification and resource shrinking for Release builds, with an additional keep rule for persisted enum members. The supplied v6.2.4 APK measures 2.03 MiB versus 11.91 MiB for v6.2.3 (about 83% smaller). Its package/version metadata and APK Signature Scheme v2 signature were verified; its signer certificate matches the publicly released v6.2.3 APK. This is not a reproducible source-to-binary build, and the v6.2.4 APK has not been published as a GitHub Release.
+- The CI workflow now exercises the Release resource-shrinking task without a signing key, alongside the Android Debug build and source checks.
+
 ## Unreleased — documentation
 
 - Added a documentation index, a non-binding roadmap, a build/verification guide, a clearly labelled workflow illustration, and a user-provided capture of the app's Chinese empty state. These documentation updates do not change the v6.2.3 APK or its release assets; a populated pairing-session capture is still pending.
@@ -27,6 +32,7 @@ This changelog highlights user-facing changes. Release-specific compatibility an
 
 ## 中文摘要
 
+- **未发布的 v6.2.4 源码更新**：Release 构建开启 R8 代码压缩与资源收缩，并增加持久化枚举成员的保留规则。随包 v6.2.4 APK 为 2.03 MiB，v6.2.3 为 11.91 MiB（约缩小 83%）；已核对包名/版本元数据、APK Signature Scheme v2 签名有效性，且证书与公开发布的 v6.2.3 APK 一致。这不是源码到二进制的可复现构建，v6.2.4 APK 尚未发布为 GitHub Release。CI 现在会在无需签名密钥的情况下执行 Release 资源收缩任务，并运行 Android Debug 构建和源码检查。
 - **未发布的文档更新**：新增文档索引、非承诺式路线图、构建/核验指南、明确标注的流程示意图，以及用户提供的中文空状态应用截图。这些文档更新不改变 v6.2.3 APK 或其发行附件；展示已选图片并完成配对的截图仍待补充。
 - **6.2.3**：修复改名后可能出现的 Lazy 列表重复 key 崩溃；检测到增量更新会产生重复 key 时，放弃局部回填并改为完整刷新。项目提供的记录称已在 MuMu Android 15 模拟器反复验证拖放链路。
 - **6.2.2**：拖拽模式使用独立把手，降低拖拽与列表滚动的手势冲突。

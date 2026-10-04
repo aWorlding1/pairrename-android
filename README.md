@@ -73,9 +73,9 @@ These checks do not require an Android SDK or Gradle. They exercise source-level
 
 ## Version and validation
 
-The latest tagged release is **v6.2.3 (versionCode 61)**. The live CI badge above tracks the default-branch workflow; use [workflow history](https://github.com/aWorlding1/pairrename-android/actions/workflows/ci.yml) to inspect current runs and their exact jobs rather than relying on a hard-coded run number. The separately distributed Release APK's package/version metadata match the tagged source, and its APK Signature Scheme v2 signature verifies. This is a signature/metadata check, not a reproducible source-to-binary build. See the [build and verification guide](docs/BUILDING_AND_VERIFICATION.md) for commands and limits.
+The latest public tagged release remains **v6.2.3 (versionCode 61)**. The `main` branch now contains **v6.2.4 source (versionCode 62)**, with R8 code minification and resource shrinking enabled for Release builds. The supplied v6.2.4 APK is 2.03 MiB—about 83% smaller than the v6.2.3 APK. Its package/version metadata match, its APK Signature Scheme v2 signature verifies, and its signer certificate matches the publicly released v6.2.3 APK. These checks establish signature validity and signing continuity, **not** a reproducible source-to-binary build. The v6.2.4 APK has not yet been published as a GitHub Release. See the [build and verification guide](docs/BUILDING_AND_VERIFICATION.md) for commands and limits.
 
-Project-supplied notes report installation and interaction checks on a MuMu Android 15 emulator, including repeated drag/drop after the duplicate-list-key fix. That report is attributed to the project; it is not a claim that every Android device or document provider has been tested.
+Project-supplied notes report that v6.2.4 was installed over v6.2.3 with user data retained and that interaction checks were performed on a MuMu Android 15 emulator. These are project-attributed results, not independently reproduced here and not a claim that every Android device or document provider has been tested. The live CI badge above tracks the default-branch workflow; use [workflow history](https://github.com/aWorlding1/pairrename-android/actions/workflows/ci.yml) to inspect current runs and their exact jobs rather than relying on a hard-coded run number.
 
 ## Project documentation
 
@@ -129,7 +129,9 @@ PairRename 是一款本地优先的 Android 图片工作台，适合整理两组
 
 ## 下载与快速开始
 
-**当前版本：** `v6.2.3` · `versionCode 61` · Android 8.0+（API 26+）
+**当前公开下载版：** `v6.2.3` · `versionCode 61` · Android 8.0+（API 26+）
+
+**main 源码版本：** `v6.2.4` · `versionCode 62`；其 APK 尚未发布到 GitHub Releases。
 
 1. 在 [GitHub Releases](https://github.com/aWorlding1/pairrename-android/releases) 下载签名 APK 与 SHA-256 校验文件。
 2. 安装前先用 `PairRename-v6.2.3-SHA256SUMS.txt` 核对 APK；只安装你信任来源的软件。
@@ -162,9 +164,9 @@ cd pairrename-android
 
 ## 版本与验证
 
-当前最新标签版为 **v6.2.3（versionCode 61）**。上方 CI 徽章跟踪默认分支工作流；可在[工作流运行记录](https://github.com/aWorlding1/pairrename-android/actions/workflows/ci.yml)中查看每次运行及具体任务。单独发布的 Release APK，其包名/版本元数据与该标签源码相符，APK Signature Scheme v2 签名核验通过。这是签名与元数据检查，不代表源码到二进制可复现构建。
+当前最新公开标签版仍为 **v6.2.3（versionCode 61）**；`main` 分支现已包含 **v6.2.4 源码（versionCode 62）**，Release 构建开启 R8 代码压缩和资源收缩。随源码提供的 v6.2.4 APK 为 2.03 MiB，较 v6.2.3 缩小约 83%；其包名/版本元数据匹配，APK Signature Scheme v2 签名有效，签名证书与公开发布的 v6.2.3 APK 一致。这证明签名有效及签名连续性，**不代表源码到二进制可复现构建**；v6.2.4 APK 尚未发布到 GitHub Releases。
 
-项目提供的记录称，曾在 MuMu Android 15 模拟器检查安装与交互，并在修复重复列表 key 后反复测试拖放流程。这是项目提供的测试记录，并不表示已经覆盖所有 Android 设备或文档/存储提供方。
+项目提供的记录称，v6.2.4 曾覆盖安装 v6.2.3 并保留用户数据，且在 MuMu Android 15 模拟器进行了交互检查。这些是项目归属的测试记录，本次没有独立复现，也不表示已经覆盖所有 Android 设备或文档/存储提供方。上方 CI 徽章跟踪默认分支工作流；可在[工作流运行记录](https://github.com/aWorlding1/pairrename-android/actions/workflows/ci.yml)中查看每次运行及具体任务。
 
 ## 隐私与文件安全
 
