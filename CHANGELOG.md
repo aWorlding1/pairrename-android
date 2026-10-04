@@ -4,7 +4,7 @@ This changelog highlights user-facing changes. Release-specific compatibility an
 
 ## Unreleased — documentation
 
-- Added a documentation index, a non-binding roadmap, a build/verification guide, and a clearly labelled workflow illustration. These documentation updates do not change the v6.2.3 APK or its release assets; genuine in-app screenshots remain pending capture from a running Android environment.
+- Added a documentation index, a non-binding roadmap, a build/verification guide, a clearly labelled workflow illustration, and a user-provided capture of the app's Chinese empty state. These documentation updates do not change the v6.2.3 APK or its release assets; a populated pairing-session capture is still pending.
 
 ## 6.2.3 — 2026-10-04
 
@@ -27,7 +27,7 @@ This changelog highlights user-facing changes. Release-specific compatibility an
 
 ## 中文摘要
 
-- **未发布的文档更新**：新增文档索引、非承诺式路线图、构建/核验指南和明确标注的流程示意图。这些文档更新不改变 v6.2.3 APK 或其发行附件；真实应用截图需待 Android 运行环境采集后再加入。
+- **未发布的文档更新**：新增文档索引、非承诺式路线图、构建/核验指南、明确标注的流程示意图，以及用户提供的中文空状态应用截图。这些文档更新不改变 v6.2.3 APK 或其发行附件；展示已选图片并完成配对的截图仍待补充。
 - **6.2.3**：修复改名后可能出现的 Lazy 列表重复 key 崩溃；检测到增量更新会产生重复 key 时，放弃局部回填并改为完整刷新。项目提供的记录称已在 MuMu Android 15 模拟器反复验证拖放链路。
 - **6.2.2**：拖拽模式使用独立把手，降低拖拽与列表滚动的手势冲突。
 - **6.2.1**：改进手势方向处理与模式开关状态。

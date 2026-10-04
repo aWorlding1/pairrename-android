@@ -5,6 +5,7 @@ This page is the lightweight documentation index for PairRename. The README rema
 ## Product and maintenance
 
 - [Project principles](PROJECT_PRINCIPLES.md) — the safety and privacy commitments behind the workflow.
+- [Actual Chinese interface capture](images/pairrename-compare-empty-state-zh-CN.jpg) — user-provided empty state; neither folder is selected, and the app version is not visible.
 - [Roadmap](../ROADMAP.md) — current focus and exploratory ideas; no delivery dates are promised.
 - [Changelog](../CHANGELOG.md) — user-facing changes across versions.
 - [v6.2.3 release notes](../RELEASE_NOTES.md) — details for the current public release.
@@ -33,6 +34,7 @@ The documentation set is intentionally small today. It is maintained in the repo
 ### 产品与维护
 
 - [项目原则](PROJECT_PRINCIPLES.md)：工作流程背后的安全与隐私约定。
+- [真实中文界面截图](images/pairrename-compare-empty-state-zh-CN.jpg)：用户提供的空状态画面，左右目录尚未选择，且图中看不到应用版本号。
 - [路线图](../ROADMAP.md)：当前重点与探索方向，不承诺交付日期。
 - [变更记录](../CHANGELOG.md)：各版本面向用户的改动。
 - [v6.2.3 发行说明](../RELEASE_NOTES.md)：当前公开版本的详细说明。

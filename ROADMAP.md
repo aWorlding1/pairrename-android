@@ -10,7 +10,7 @@ PairRename's direction is to make photo relationships visible, file changes revi
 
 ## Exploring—not committed
 
-- Capture genuine app screenshots and a short walkthrough from a running app using synthetic demo photos. Do not present a mockup or workflow diagram as an app screenshot.
+- Add a second genuine capture showing a populated pairing/review flow, plus a short walkthrough using synthetic demo photos. The current user-provided screenshot shows the empty workspace only. Do not present a mockup or workflow diagram as an app screenshot.
 - Improve source-to-binary verification, including dependency verification and repeat-build comparisons, before making any reproducibility claim.
 - Add deeper task-oriented or versioned web documentation if the documentation volume and release matrix make a separate site worth maintaining. For now, the README and versioned repository files are the canonical docs.
 
@@ -32,7 +32,7 @@ PairRename 希望让图片之间的对应关系看得见、文件改动能复核
 
 ### 正在探索，尚未承诺
 
-- 在真实运行的应用中，用合成演示照片拍摄界面截图和短演示；概念稿或流程图不能冒充应用截图。
+- 再补一张展示实际图片配对/复核过程的应用截图和短演示，使用合成演示照片即可；当前用户提供的截图只展示了空工作区。概念稿或流程图不能冒充应用截图。
 - 进一步核验源码与发布二进制之间的关系，例如依赖校验与干净环境重复构建；完成验证前不宣称「可复现构建」。
 - 当文档数量和版本矩阵足以支撑维护时，再考虑独立的任务型或版本化文档站。目前以 README 和随版本管理的仓库文档为准。
 

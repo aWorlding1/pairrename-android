@@ -26,7 +26,15 @@ When a photo set has been copied, edited, or reorganized, matching files by file
 
 ![Workflow illustration: compare two folders, review pairings and the rename plan, then apply or adjust.](docs/images/pairrename-workflow.png)
 
-*Workflow illustration—not an in-app screenshot.* Genuine screenshots are planned once they can be captured from a running app; see the [roadmap](ROADMAP.md).
+*Workflow illustration—not an in-app screenshot.*
+
+<details>
+<summary>View the actual Chinese interface screenshot (empty state)</summary>
+
+![User-provided screenshot of PairRename's Chinese comparison screen; neither folder is selected, so both panes show the empty state.](docs/images/pairrename-compare-empty-state-zh-CN.jpg)
+
+*This is a user-provided capture of the running app. The app version is not visible in the screenshot; both folder panes are unselected, so it demonstrates the workspace layout rather than a completed pairing session.*
+</details>
 
 For the product's safety and privacy commitments, see [Project Principles](docs/PROJECT_PRINCIPLES.md). Feature availability can vary by Android version and storage provider; review each plan and try unfamiliar workflows on copies first.
 
@@ -111,7 +119,11 @@ PairRename 是一款本地优先的 Android 图片工作台，适合整理两组
 
 ![流程示意：比对两个目录、复核配对与改名方案，再执行或调整。](docs/images/pairrename-workflow.png)
 
-*这是流程示意图，不是应用界面截图。真实界面截图计划在能够从实际运行的应用中采集后再加入，详见[路线图](ROADMAP.md)。*
+*这是流程示意图，不是应用界面截图。*
+
+## 实际界面截图
+
+[查看用户提供的真实中文界面截图](docs/images/pairrename-compare-empty-state-zh-CN.jpg)。图中左右目录尚未选择，因此两栏显示空状态；截图没有显示应用版本，也尚未展示一组已经完成的配对流程。后续演示计划见[路线图](ROADMAP.md)。
 
 关于数据安全和隐私的设计约定，参见[项目原则](docs/PROJECT_PRINCIPLES.md)。不同 Android 版本及存储提供方的行为可能不同；新流程请先在副本上验证。
 
